@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chinmay Deshmukh — Operations & Supply Chain Professional. Explore inventory management, logistics, analytics, and leadership experience." />
+  <meta name="theme-color" content="#131f2a" />
+  <title>Chinmay Deshmukh | Supply Chain Portfolio</title>
+  <link rel="stylesheet" href="assets/control-center.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" async></script>
+  <script src="assets/control-center.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient-fallback" aria-hidden="true"></div>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <svg class="icon-definitions" aria-hidden="true" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 9 5v9l-9 5-9-5V8l9-5Zm-9 5 9 5 9-5M12 13v9M7.5 5.5l9 5v5"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16M6 16v-5M12 16V4M18 16V8"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 5h12v12H2zM14 10h4l4 4v3h-8"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></symbol>
+      <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h9a4 4 0 0 1 0 8H8a3 3 0 0 0 0 6h9"/></symbol>
+      <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12M9 15h12"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+      <symbol id="i-loop" viewBox="0 0 24 24"><path d="M20 8a8 8 0 0 0-14-3L3 8m0-5v5h5M4 16a8 8 0 0 0 14 3l3-3m0 5v-5h-5"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="dispatch-intro" data-intro aria-hidden="true">
+    <div class="intro-route"></div>
+    <div class="intro-manifest">
+      <span class="intro-overline">CHINMAY DESHMUKH / PORTFOLIO</span>
+      <svg class="intro-package icon"><use href="#i-box"/></svg>
+      <p>Connecting<br /><em>every link.</em></p>
+      <div class="intro-barcode"></div>
+      <span class="intro-destination">OPERATIONS <span>→</span> ANALYTICS <span>→</span> IMPACT</span>
+    </div>
+  </div>
+
+  <header class="market-header">
+    <div class="market-top shell">
+      <a class="brand" href="#home" aria-label="Chinmay Deshmukh, home">
+        <svg class="brand-cube icon"><use href="#i-box"/></svg>
+        <span><strong class="brand-name">chinmay<span>.</span></strong><small class="brand-subtitle">SUPPLY CHAIN PORTFOLIO</small></span>
+      </a>
+      <div class="location-label"><svg class="icon"><use href="#i-pin"/></svg><span><small>Based in</small><strong>Dublin, Ireland</strong></span></div>
+      <form class="search-form" data-portfolio-search role="search">
+        <label class="sr-only" for="portfolio-search">Search this portfolio</label>
+        <span class="search-scope" aria-hidden="true">Portfolio</span>
+        <input id="portfolio-search" type="search" placeholder="Search skills, experience, projects..." autocomplete="off" aria-controls="search-results" />
+        <button class="search-submit" type="submit" aria-label="Search portfolio"><svg class="icon"><use href="#i-search"/></svg></button>
+        <div id="search-results" class="search-results" hidden></div>
+        <span id="search-status" class="sr-only" role="status" aria-live="polite"></span>
+      </form>
+      <a class="resume-action" href="assets/chinmay-deshmukh-resume.pdf" download="Chinmay_Deshmukh_Resume.pdf"><svg class="icon"><use href="#i-download"/></svg><span><small>The complete picture</small><strong>Download Resume</strong></span></a>
+      <button class="motion-toggle" data-motion-toggle type="button" aria-pressed="false" hidden><span class="motion-indicator" aria-hidden="true"></span><span data-motion-label>Pause motion</span></button>
+    </div>
+    <div class="market-subnav">
+      <div class="shell">
+        <nav class="navlinks" aria-label="Portfolio sections">
+          <a href="#home" data-nav-link><svg class="icon"><use href="#i-grid"/></svg>Overview</a>
+          <a href="#education" data-nav-link>Education</a>
+          <a href="#expertise" data-nav-link>Technical Expertise</a>
+          <a href="#experience" data-nav-link>Professional Experience</a>
+          <a href="#leadership" data-nav-link>Leadership</a>
+          <a href="#projects" data-nav-link>Research &amp; Projects</a>
+        </nav>
+        <span class="subnav-note">From goods-in to better outcomes <span aria-hidden="true">↗</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero-section" aria-labelledby="hero-heading" data-scroll-section>
+
+      <style>
+        #home .hero-visual { padding-bottom: 148px; }
+        #home .hero-visual .float-accuracy { top: auto; bottom: 8px; }
+        #home .warehouse-stage {
+          position: relative;
+          width: calc(100% + 40px);
+          min-width: 0;
+          flex: 0 1 auto;
+          animation: warehouse-float 7s ease-in-out infinite;
+        }
+        #home .warehouse-stage > .warehouse-svg {
+          display: block;
+          width: 100%;
+          height: auto;
+          animation: none;
+        }
+        #home .warehouse-network {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          overflow: visible;
+        }
+        #home .network-flow {
+          stroke-dasharray: 3 13;
+          animation: hero-network-flow 3s linear infinite;
+        }
+        #home .network-node {
+          filter: drop-shadow(0 0 5px #62efd9);
+          animation: hero-network-pulse 2.4s ease-in-out infinite;
+        }
+        @keyframes hero-network-flow { to { stroke-dashoffset: -48; } }
+        @keyframes hero-network-pulse { 50% { opacity: .4; } }
+        @media (max-width: 900px) {
+          #home .warehouse-stage { width: calc(100% + 35px); }
+        }
+        @media (max-width: 680px) {
+          #home .warehouse-stage { width: 100%; }
+        }
+        html.motion-paused #home .warehouse-stage { transform: none !important; }
+        @media (prefers-reduced-motion: reduce) {
+          #home .warehouse-stage { animation: none; transform: none; }
+          #home .network-flow, #home .network-node { animation: none; }
+        }
+      </style>
+      <div class="hero-orb orb-cyan" aria-hidden="true"></div><div class="hero-orb orb-amber" aria-hidden="true"></div>
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal><span class="signal-dot" aria-hidden="true"></span>THE PERSON BEHIND THE PROCESS</p>
+          <h1 id="hero-heading" data-reveal>Supply Chain<br /><span class="hero-accent">Management</span><br />Graduate</h1>
+          <p class="hero-description" data-reveal>Bridging floor operations with data-driven strategic analytics</p>
+          <div class="hero-actions" data-reveal><a href="#experience" class="button button-amber" data-magnetic>Explore my journey <svg class="icon"><use href="#i-arrow"/></svg></a><a href="#projects" class="button button-outline">View Projects <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-person" data-reveal><span class="avatar"><img src="/assets/chinmay-profile.jpg" alt="Chinmay Deshmukh" width="41" height="41" decoding="async"></span><span><strong>Chinmay Deshmukh</strong><small>MSc Operations &amp; Supply Chain Management · DCU</small></span></div>
+        </div>
+        <div class="hero-visual relative" data-parallax="0.08">
+          <div class="visual-caption"><span class="signal-dot"></span>SUPPLY CHAIN IN MOTION <span>01 — 04</span></div>
+          <div class="warehouse-stage relative">
+          <svg class="warehouse-svg" viewBox="0 0 620 500" role="img" aria-label="Animated illustration of a warehouse with parcels moving through receiving, inventory, and fulfilment">
+            <defs>
+              <linearGradient id="floor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#175166"/><stop offset="1" stop-color="#122837"/></linearGradient>
+              <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf5f6"/><stop offset="1" stop-color="#92b9c8"/></linearGradient>
+              <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#376779"/><stop offset="1" stop-color="#21475b"/></linearGradient>
+              <radialGradient id="warehouse-light"><stop stop-color="#3cd6c6" stop-opacity=".3"/><stop offset="1" stop-color="#3cd6c6" stop-opacity="0"/></radialGradient>
+            </defs>
+            <ellipse cx="330" cy="305" rx="260" ry="180" fill="url(#warehouse-light)" class="warehouse-aura"/>
+            <path d="m35 310 290-164 270 155-290 164Z" fill="url(#floor)" stroke="#376375" stroke-width="1"/>
+            <g fill="none" stroke="#356173" stroke-width="1" opacity=".5"><path d="m95 275 270 156M155 241l270 156M215 207l270 156M275 173l270 156M95 345l289-165M155 380l289-165M215 415l289-165M275 449l289-165"/></g>
+            <g class="warehouse-building">
+              <path d="m177 183 153 87v130l-153-88Z" fill="#28566a"/>
+              <path d="m330 270 172-99v131l-172 98Z" fill="url(#wall)"/>
+              <path d="m177 183 172-99 153 87-172 99Z" fill="url(#roof)"/>
+              <path d="m199 183 150-86 131 75-150 86Z" fill="#a7c9d3" stroke="#d9edf2"/>
+              <path d="m223 169 130 75m-96-95 130 75m-96-95 130 75m-96-95 130 75" stroke="#e2eff3" stroke-width="2"/>
+              <path d="m177 183 153 87 172-99" fill="none" stroke="#ffb547" stroke-width="5"/>
+              <path d="m196 217 32 18v29l-32-18Zm48 27 32 18v29l-32-18Zm48 27 21 12v29l-21-12Z" fill="#6faaba" opacity=".6"/>
+              <path d="m350 279 48-28v92l-48 28Zm66-38 48-28v92l-48 28Z" fill="#112b3c" stroke="#6595a5"/>
+              <path d="m350 279 48-28m18-10 48-28" stroke="#ffb547" stroke-width="4"/>
+              <path d="m353 295 41-24m-41 39 41-24m-41 39 41-24m25-38 42-24m-42 39 42-24m-42 39 42-24" stroke="#3d6475" stroke-width="2"/>
+              <path d="m185 305 137 78M338 389l156-89" stroke="#7aa2ad" stroke-width="3"/>
+              <circle cx="330" cy="258" r="4" fill="#54e1c7" class="beacon"/>
+            </g>
+            <path d="M64 329 173 392Q190 403 207 394L323 327" fill="none" stroke="#ffb547" stroke-width="3" stroke-dasharray="7 8" class="route-dash"/>
+            <path d="m445 352 67 38q15 9 31-1l47-28" fill="none" stroke="#4bd7c5" stroke-width="3" stroke-dasharray="7 8" class="route-dash reverse"/>
+            <g class="moving-parcel">
+              <path d="m113 321 28-16 28 16-28 16Z" fill="#ffd38a"/><path d="m113 321 28 16v31l-28-16Z" fill="#d58c2d"/><path d="m141 337 28-16v31l-28 16Z" fill="#ffb547"/><path d="m127 313 28 16v15" fill="none" stroke="#fff0cf" stroke-width="5"/>
+            </g>
+            <g class="moving-parcel parcel-two">
+              <path d="m234 367 21-12 21 12-21 12Z" fill="#ffd38a"/><path d="m234 367 21 12v23l-21-12Z" fill="#d58c2d"/><path d="m255 379 21-12v23l-21 12Z" fill="#ffb547"/>
+            </g>
+            <g class="delivery-vehicle">
+              <path d="m440 379 39-23 49 28-39 23Z" fill="#f5f8fa"/><path d="m440 379 49 28v31l-49-28Z" fill="#a3c0cc"/><path d="m489 407 39-23v31l-39 23Z" fill="#dbe7ea"/><path d="m528 392 22 13 12 22-34-12Z" fill="#ffba53"/><path d="m528 415 34 12v18l-34-19Z" fill="#dd8e25"/><path d="m536 401 10 6 7 12-17-10Z" fill="#244452"/><ellipse cx="459" cy="416" rx="7" ry="11" fill="#0b2332"/><ellipse cx="532" cy="433" rx="7" ry="11" fill="#0b2332"/>
+            </g>
+            <g font-family="system-ui,sans-serif" font-size="9" letter-spacing="2" fill="#91b7c4"><text x="55" y="291">RECEIVE</text><text x="364" y="122">STORE</text><text x="448" y="473">DELIVER</text></g>
+            <g fill="#4bd7c5"><circle cx="64" cy="329" r="5" class="beacon"/><circle cx="590" cy="361" r="5" class="beacon"/></g>
+          </svg>
+
+          <svg class="warehouse-network absolute inset-0 pointer-events-none" viewBox="0 0 620 500" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="#62efd9" stroke-width="1.25" stroke-linecap="round">
+              <path d="M175 295 145 225 349 110 500 220 540 360" opacity=".22"/>
+              <path d="M175 295 350 395 540 360M349 110 374 310 540 360" opacity=".16"/>
+              <path class="network-flow" d="M175 295 145 225 349 110 500 220 540 360" opacity=".7"/>
+              <path class="network-flow" d="M175 295 350 395 540 360M349 110 374 310 540 360" opacity=".5" style="animation-delay: -1.5s"/>
+            </g>
+            <g fill="#62efd9" fill-opacity=".12">
+              <circle cx="175" cy="295" r="12"/>
+              <circle cx="349" cy="110" r="12"/>
+              <circle cx="500" cy="220" r="12"/>
+              <circle cx="540" cy="360" r="12"/>
+            </g>
+            <g fill="#b9fff2" stroke="#62efd9" stroke-width="1">
+              <circle class="network-node animate-pulse" cx="175" cy="295" r="4"/>
+              <circle class="network-node animate-pulse" cx="349" cy="110" r="4" style="animation-delay: -.6s"/>
+              <circle class="network-node animate-pulse" cx="500" cy="220" r="4" style="animation-delay: -1.2s"/>
+              <circle class="network-node animate-pulse" cx="540" cy="360" r="4" style="animation-delay: -1.8s"/>
+            </g>
+            <g class="network-labels">
+              <text x="160" y="279" text-anchor="end">IoT Sensors</text>
+              <text x="362" y="96">SAP ERP</text>
+              <text x="609" y="204" text-anchor="end">Power BI Analytics</text>
+              <text x="526" y="344" text-anchor="end">Smart Logistics</text>
+            </g>
+          </svg>
+          </div>
+          <div class="glass-float float-inbound" data-glass><span class="float-icon"><svg class="icon"><use href="#i-truck"/></svg></span><span><small>INBOUND EXPERIENCE</small><strong>6–15 <em>/ week</em></strong><span>Deliveries &amp; stock checks · Tesco</span></span></div>
+          <div class="glass-float float-accuracy" data-glass><span class="float-label"><i></i>STOCK FILE ACCURACY</span><strong>85% <span>→</span> 91–93%</strong><small>Process improvement · Marks and Spencer</small><span class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom shell"><a class="scroll-invite" href="#education"><span class="scroll-wheel" aria-hidden="true"></span>Scroll to follow the flow <span>↓</span></a><button data-replay-intro class="replay-button" type="button" hidden><svg class="icon"><use href="#i-loop"/></svg>Replay opening</button><span class="hero-coordinate">PUNE → DUBLIN / A JOURNEY IN OPERATIONS</span></div>
+    </section>
+
+    <div class="marketplace-content shell">
+      <section class="impact-grid" aria-label="Career highlights">
+        <a class="impact-card" href="#marks-spencer-role" data-reveal><span class="impact-icon"><svg class="icon"><use href="#i-check"/></svg></span><span class="impact-label">Inventory accuracy</span><strong class="impact-value">91–93<span>%</span></strong><span class="impact-source">Up from 85% · Marks and Spencer <span>↗</span></span></a>
+        <a class="impact-card" href="#marks-spencer-role" data-reveal style="--reveal-delay:60ms"><span class="impact-icon teal"><svg class="icon"><use href="#i-box"/></svg></span><span class="impact-label">Inventory scope</span><strong class="impact-value">~7,500</strong><span class="impact-source">SKUs covered by stock audits <span>↗</span></span></a>
+        <a class="impact-card" href="#leadership" data-reveal style="--reveal-delay:120ms"><span class="impact-icon"><svg class="icon"><use href="#i-route"/></svg></span><span class="impact-label">Procurement savings</span><strong class="impact-value">10<span>%</span></strong><span class="impact-source">Vendor negotiation · Symbiosis <span>↗</span></span></a>
+        <a class="impact-card" href="#leadership" data-reveal style="--reveal-delay:180ms"><span class="impact-icon teal"><svg class="icon"><use href="#i-globe"/></svg></span><span class="impact-label">Event delivery</span><strong class="impact-value">200<span>+</span></strong><span class="impact-source">Attendees per event · Symbiosis <span>↗</span></span></a>
+      </section>
+
+      <section id="education" class="section-panel education-section" aria-labelledby="education-heading" data-scroll-section>
+        <div class="section-heading" data-reveal>
+          <div><p class="section-kicker">01 / ACADEMIC FOUNDATION</p><h2 id="education-heading">Education</h2><p class="section-description">Academic foundations in operations, supply chain management, and commerce.</p></div>
+          <span class="section-label">Dublin, Ireland · Pune, India</span>
+        </div>
+        <div class="education-grid">
+          <article id="education-dcu" class="education-card" aria-labelledby="dcu-degree" data-reveal data-search-title="MSc Operations and Supply Chain Management · Dublin City University" data-search-keywords="education masters master's degree DCU operations supply chain management analytics logistics resilience strategy coursework" data-search-description="Aug 2024–Aug 2025 · Dublin, Ireland · Second Class Honours.">
+            <p class="degree-level">Master's Degree</p>
+            <h3 id="dcu-degree" class="degree-title">MSc — Operations and Supply Chain Management</h3>
+            <p class="degree-institution">Dublin City University</p>
+            <div class="degree-meta"><span>Dublin, Ireland</span><span><time datetime="2024-08">Aug 2024</time> – <time datetime="2025-08">Aug 2025</time></span></div>
+            <p class="degree-honours">Second Class Honours</p>
+            <div class="degree-coursework">
+              <h4>Relevant coursework</h4>
+              <ul class="coursework-list">
+                <li>Operations Analytics</li>
+                <li>Sustainable Transport &amp; Logistics</li>
+                <li>Supply Chain for Resilience</li>
+                <li>Digital Supply Chain</li>
+                <li>Operational Strategy</li>
+                <li>Business Process Innovation</li>
+              </ul>
+            </div>
+          </article>
+          <article id="education-symbiosis" class="education-card" aria-labelledby="symbiosis-degree" data-reveal style="--reveal-delay:100ms" data-search-title="Bachelor of Commerce · Symbiosis College of Arts and Commerce" data-search-keywords="education bachelor's bachelor commerce Symbiosis accounting international economics trade policy enterprise strategy coursework" data-search-description="Sept 2021–Apr 2024 · Pune, India · First Class Honours.">
+            <p class="degree-level">Bachelor's Degree</p>
+            <h3 id="symbiosis-degree" class="degree-title">Bachelor of Commerce</h3>
+            <p class="degree-institution">Symbiosis College of Arts and Commerce</p>
+            <div class="degree-meta"><span>Pune, India</span><span><time datetime="2021-09">Sept 2021</time> – <time datetime="2024-04">Apr 2024</time></span></div>
+            <p class="degree-honours">First Class Honours</p>
+            <div class="degree-coursework">
+              <h4>Relevant coursework</h4>
+              <ul class="coursework-list">
+                <li>Advanced Accounting</li>
+                <li>International Economics Trade Theory &amp; Policy</li>
+                <li>Enterprise and Strategy</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="expertise" class="section-panel toolkit-section" aria-labelledby="expertise-heading" data-scroll-section>
+        <div class="section-heading" data-reveal><div><p class="section-kicker">02 / CAPABILITY CATALOGUE</p><h2 id="expertise-heading">Technical Expertise</h2><p class="section-description">The right tools. At every stage of the operation.</p></div><span class="section-label">5 tools. One connected perspective.</span></div>
+        <div class="tool-filters" role="group" aria-label="Filter technical expertise"><button type="button" data-tool-filter="all" aria-pressed="true">All expertise</button><button type="button" data-tool-filter="systems" aria-pressed="false">Enterprise systems</button><button type="button" data-tool-filter="analytics" aria-pressed="false">Data &amp; analytics</button><button type="button" data-tool-filter="planning" aria-pressed="false">Planning</button></div>
+        <p class="sr-only" data-filter-status role="status" aria-live="polite">Showing all 5 tools.</p>
+        <div class="tool-grid">
+          <article id="skill-sap" class="tool-card" data-tool-category="systems" data-reveal data-search-title="SAP MM/WM" data-search-keywords="SAP MM WM systems materials warehouse inventory" data-search-description="Enterprise systems for materials and warehouse management."><div class="tool-visual tool-sap" aria-hidden="true"><svg class="icon"><use href="#i-layers"/></svg><span>MM <i>/</i> WM</span><div class="visual-ring"></div></div><div class="tool-content"><span class="tool-category">Enterprise systems</span><h3 class="tool-name">SAP MM/WM</h3><p class="tool-summary">Materials and warehouse management.</p><span class="tool-footer">Connect the operation <span>↗</span></span></div></article>
+          <article id="skill-powerbi" class="tool-card" data-tool-category="analytics" data-reveal style="--reveal-delay:65ms" data-search-title="Power BI" data-search-keywords="Power BI dashboards visualization analytics KPI" data-search-description="Dashboards and operational KPI visibility."><div class="tool-visual tool-powerbi" aria-hidden="true"><div class="bar-chart"><i></i><i></i><i></i><i></i><i></i></div><span class="chart-baseline"></span></div><div class="tool-content"><span class="tool-category">Data &amp; analytics</span><h3 class="tool-name">Power BI</h3><p class="tool-summary">Dashboards and operational KPI visibility.</p><span class="tool-footer">Make performance visible <span>↗</span></span></div></article>
+          <article id="skill-tableau" class="tool-card" data-tool-category="analytics" data-reveal style="--reveal-delay:130ms" data-search-title="Tableau" data-search-keywords="Tableau visualization data analytics insights" data-search-description="Visual exploration and data storytelling."><div class="tool-visual tool-tableau" aria-hidden="true"><div class="tableau-dots"><i>+</i><i>+</i><i>+</i><i>+</i><i>+</i><i>+</i><i>+</i><i>+</i><i>+</i></div></div><div class="tool-content"><span class="tool-category">Data &amp; analytics</span><h3 class="tool-name">Tableau</h3><p class="tool-summary">Visual exploration and data storytelling.</p><span class="tool-footer">Find the bigger picture <span>↗</span></span></div></article>
+          <article id="skill-sql" class="tool-card" data-tool-category="analytics" data-reveal style="--reveal-delay:195ms" data-search-title="SQL" data-search-keywords="SQL database query querying data analytics" data-search-description="Structured querying and data exploration."><div class="tool-visual tool-sql" aria-hidden="true"><svg class="icon"><use href="#i-database"/></svg><span class="code-label">SELECT insight_</span></div><div class="tool-content"><span class="tool-category">Data &amp; analytics</span><h3 class="tool-name">SQL</h3><p class="tool-summary">Structured querying and data exploration.</p><span class="tool-footer">Ask better questions <span>↗</span></span></div></article>
+          <article id="skill-excel" class="tool-card" data-tool-category="planning" data-reveal style="--reveal-delay:260ms" data-search-title="Advanced Excel" data-search-keywords="Excel pivot VLOOKUP macros planning spreadsheet forecasting" data-search-description="Pivot tables, VLOOKUPs, and macros."><div class="tool-visual tool-excel" aria-hidden="true"><div class="excel-sheet"><span>ƒx</span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="tool-content"><span class="tool-category">Planning &amp; analysis</span><h3 class="tool-name">Advanced Excel</h3><p class="tool-summary">Pivot tables, VLOOKUPs, and macros.</p><span class="tool-footer">Turn detail into decisions <span>↗</span></span></div></article>
+        </div>
+      </section>
+
+      <section id="experience" class="section-panel experience-section" aria-labelledby="experience-heading" data-scroll-section>
+        <div class="section-heading" data-reveal><div><p class="section-kicker">03 / CAREER TRACKING</p><h2 id="experience-heading">Professional Experience</h2><p class="section-description">Follow the journey from receiving stock to improving availability.</p></div><span class="section-label"><svg class="icon"><use href="#i-pin"/></svg>Dublin, Ireland</span></div>
+        <div class="flow-route" aria-label="Supply chain stages" data-reveal><div class="flow-stop"><span>01</span><strong>Receive</strong><small>Check &amp; reconcile</small></div><div class="flow-stop"><span>02</span><strong>Store</strong><small>Rotate &amp; organise</small></div><div class="flow-stop"><span>03</span><strong>Replenish</strong><small>Analyse &amp; plan</small></div><div class="flow-stop"><span>04</span><strong>Control</strong><small>Audit &amp; improve</small></div><span class="flow-parcel" aria-hidden="true"><svg class="icon"><use href="#i-box"/></svg></span></div>
+        <ol class="experience-timeline" role="list" data-route-progress>
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-meta"><span class="timeline-stage">STAGE 01 / INBOUND</span><p><time datetime="2025-02">Feb 2025</time> – <time datetime="2025-12">Dec 2025</time></p><small>Dublin, Ireland</small></div><span class="timeline-node" aria-hidden="true"><svg class="icon"><use href="#i-truck"/></svg></span>
+            <article id="tesco-role" class="experience-card" data-search-title="Operations Assistant · Tesco Ireland" data-search-keywords="Tesco operations assistant deliveries FIFO inbound stock warehouse logistics 2025" data-search-description="Feb–Dec 2025. Inbound logistics, stock reconciliation, and warehouse-to-shelf movement.">
+              <div class="company-row"><span class="company-mark">T</span><span class="company-name">Tesco Ireland<small>RECEIVE &amp; MOVE</small></span><span class="role-location">Dublin, Ireland</span></div>
+              <h3 class="role-title">Operations Assistant</h3>
+              <div class="role-tags"><span>Inbound logistics</span><span>Stock movement</span><span>FIFO</span></div>
+              <ul class="experience-details"><li><strong>Receive &amp; reconcile.</strong> Handled 6–15 deliveries and stock checks per week, monitoring stock levels and reconciling inventory across storage areas.</li><li><strong>Store &amp; rotate.</strong> Followed standard operating procedures and FIFO stock rotation to support quality, consistency, and audit readiness.</li><li><strong>Move &amp; resolve.</strong> Processed incoming deliveries and resolved discrepancies, supporting efficient warehouse-to-shelf stock movement.</li></ul>
+              <div class="role-outcomes"><div class="outcome"><strong>6–15</strong><span>Deliveries &amp; stock checks per week</span></div><div class="outcome"><strong>FIFO</strong><span>Stock rotation &amp; process discipline</span></div></div>
+            </article>
+          </li>
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-meta"><span class="timeline-stage">STAGE 02 / INVENTORY</span><p><time datetime="2025-12">Dec 2025</time> – Present</p><small>Dublin, Ireland</small></div><span class="timeline-node" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+            <article id="marks-spencer-role" class="experience-card" data-search-title="Shift Lead · Marks and Spencer" data-search-keywords="Marks Spencer M&S shift lead inventory compliance replenishment audit stock 7500 accuracy" data-search-description="Dec 2025–Present. Stock file accuracy improved from 85% to 91–93%.">
+              <div class="company-row"><span class="company-mark mark-ms">M&amp;S</span><span class="company-name">Marks and Spencer<small>PLAN &amp; CONTROL</small></span><span class="current-tag"><i></i>Current role</span></div>
+              <h3 class="role-title">Shift Lead <span>(Inventory &amp; Compliance)</span></h3>
+              <div class="role-tags"><span>Inventory planning</span><span>Replenishment</span><span>Compliance</span></div>
+              <ul class="experience-details"><li><strong>Audit &amp; investigate.</strong> Conducted structured stock audits and gap-scanning compliance checks across approximately 7,500 SKUs, driving root-cause investigation and corrective action.</li><li><strong>Reconcile &amp; improve.</strong> Improved stock file accuracy from 85% to 91–93% through consistent data reconciliation and process discipline, increasing product availability.</li><li><strong>Analyse &amp; replenish.</strong> Used sell-through and demand data to inform replenishment decisions, reducing stockouts and improving shelf availability.</li><li><strong>Lead &amp; coordinate.</strong> Supervised a team executing daily operational and compliance processes, liaising with internal supply and logistics teams to resolve fulfilment issues.</li></ul>
+              <div class="role-outcomes"><div class="outcome"><strong>85% → 91–93%</strong><span>Improvement in stock file accuracy</span></div><div class="outcome"><strong>~7,500</strong><span>SKUs covered by stock audits</span></div></div>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section id="leadership" class="leadership-section" aria-labelledby="leadership-heading" data-scroll-section>
+        <div class="section-heading" data-reveal><div><p class="section-kicker">04 / PEOPLE &amp; PROCUREMENT</p><h2 id="leadership-heading">Voluntary Leadership</h2></div><span class="section-label">Beyond the workplace</span></div>
+        <article id="symbiosis-role" class="leadership-panel" data-reveal data-search-title="Logistics Coordinator · Symbiosis" data-search-keywords="Symbiosis leadership volunteer logistics coordinator procurement vendors negotiation team events" data-search-description="Aug 2022–Jan 2024. Led a team of 15 and reduced procurement costs by 10%.">
+          <div class="leadership-copy"><p class="leadership-kicker"><svg class="icon"><use href="#i-globe"/></svg>SYMBIOSIS / VOLUNTARY ROLE</p><h3>Logistics Coordinator</h3><p class="leadership-org">Centre for Innovation and Entrepreneurship</p><p class="leadership-campus">Symbiosis College of Arts and Commerce · Pune, India</p><p class="leadership-date"><time datetime="2022-08">Aug 2022</time> – <time datetime="2024-01">Jan 2024</time></p><ul class="leadership-details"><li>Led scheduling and workload coordination for a cross-functional team of 15, improving operational efficiency by 20%.</li><li>Sourced and negotiated with external vendors, reducing procurement costs by 10% through competitive tendering.</li><li>Negotiated supplier terms and managed procurement timelines to ensure zero-shortage delivery for 200+ attendees per event.</li></ul></div>
+          <div class="leadership-metrics" aria-label="Leadership outcomes"><div class="leadership-stat"><strong>15</strong><span>Team members coordinated</span></div><div class="leadership-stat"><strong>20<span>%</span></strong><span>Improvement in operational efficiency</span></div><div class="leadership-stat"><strong>10<span>%</span></strong><span>Reduction in procurement costs</span></div><div class="leadership-stat"><strong>200<span>+</span></strong><span>Attendees per event</span></div></div>
+          <span class="leadership-orbit" aria-hidden="true"></span>
+        </article>
+      </section>
+
+      <section id="projects" class="section-panel research-section" aria-labelledby="projects-heading" data-scroll-section data-search-title="MSc research · Circular Economy & Industry 4.0" data-search-keywords="project research dissertation DCU resilience circular economy industry 4.0 retail ESG KPI sustainability reverse logistics" data-search-description="Mixed-methods research into resilient, circular retail supply chains.">
+        <div class="section-heading" data-reveal><div><p class="section-kicker">05 / RESEARCH &amp; PROJECTS</p><h2 id="projects-heading">A wider view of the supply chain.</h2></div><span class="section-label">Dublin City University</span></div>
+        <article class="research-feature" data-reveal>
+          <div class="research-visual" aria-hidden="true"><span class="research-visual-label">THE NEXT CYCLE</span><svg viewBox="0 0 400 330" class="research-diagram"><defs><linearGradient id="research-g" x2="1" y2="1"><stop stop-color="#36cfbf"/><stop offset="1" stop-color="#ffb547"/></linearGradient></defs><circle cx="200" cy="165" r="113" fill="none" stroke="#c6d7d9" stroke-dasharray="3 8"/><circle cx="200" cy="165" r="82" fill="none" stroke="url(#research-g)" stroke-width="2" stroke-dasharray="180 75" class="research-orbit"/><circle cx="200" cy="165" r="47" fill="#143744"/><g fill="#ffffff" stroke="#ffffff"><path d="m200 139 23 13-23 13-23-13Z" fill="none" stroke-width="2"/><path d="m177 152 23 13 23-13v26l-23 13-23-13Z" fill="none" stroke-width="2"/><path d="M200 165v26" fill="none" stroke-width="2"/></g><g fill="#ffffff" stroke="#d2e2e4"><circle cx="200" cy="52" r="22"/><circle cx="313" cy="165" r="22"/><circle cx="200" cy="278" r="22"/><circle cx="87" cy="165" r="22"/></g><g fill="#19414d" font-family="system-ui" font-size="15" text-anchor="middle"><text x="200" y="58">01</text><text x="313" y="171">02</text><text x="200" y="284">03</text><text x="87" y="171">04</text></g></svg><span class="research-visual-footer">DESIGN → USE → RECOVER → RECONNECT</span></div>
+          <div class="research-copy"><span class="project-badge">MSc DISSERTATION</span><h3>Circular economy meets Industry 4.0.</h3><p class="research-description">Strategic Responses to Retail Disruptions: Integration of Circular Economy and Industry 4.0 in Retail Supply Chains.</p><ul class="research-points"><li>Mixed-methods research combining quantitative KPI analysis and qualitative expert interviews.</li><li>A strategic roadmap covering supplier collaboration, reverse logistics, and data-driven risk monitoring.</li><li>Frameworks and dashboards linking ESG metrics with operational KPIs for sustainable decision-making.</li></ul><a class="button button-amber" href="assets/chinmay-retail-supply-chain-dissertation.pdf" download="Chinmay_Deshmukh_Dissertation.pdf">Read the research <svg class="icon"><use href="#i-download"/></svg></a><span class="research-note">Full dissertation · PDF</span></div>
+        </article>
+      </section>
+
+      <section class="contact-strip" aria-labelledby="contact-heading" data-reveal><div><p class="section-kicker">THE NEXT CONNECTION</p><h2 id="contact-heading">Let's keep things moving.</h2><p>Operations. Supply chains. Better decisions.</p></div><a class="button button-dark" href="mailto:chinmay.deshmukh379@gmail.com">Get in touch <svg class="icon"><use href="#i-arrow"/></svg></a></section>
+    </div>
+  </main>
+  <a href="#home" class="back-top">Back to top <span aria-hidden="true">↑</span></a>
+  <footer class="site-footer">
+    <div class="shell footer-content">
+      <p class="footer-location">Dublin, Ireland</p>
+      <nav class="footer-links" aria-label="Contact links">
+        <!-- Replace the LinkedIn homepage with your personal profile URL. -->
+        <a class="footer-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (placeholder, opens in a new tab)">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="currentColor">
+            <circle cx="4" cy="4" r="2" />
+            <path d="M2 8h4v14H2zM10 8h4v2c.8-1.5 2.1-2.3 4-2.3 3.1 0 4 2.1 4 5.4V22h-4v-8.1c0-1.7-.4-2.7-1.8-2.7-1.6 0-2.2 1.1-2.2 3V22h-4Z" />
+          </svg>
+        </a>
+        <a class="footer-email" href="mailto:chinmay.deshmukh379@gmail.com">Send Email</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
